@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import '../css/HeaderStyle.css';
-import shopIcon from '../shopIcon.png';
 
 export class Header extends Component {
     render() {
         return (
-            <div className = "header">    
-                <img src={shopIcon} alt="website logo" />          
+            <div className = "header"> 
+                <i class="fa fa-search" aria-hidden="true" id="search"></i>   
+                <i className="fa fa-shopping-cart" aria-hidden="true" id="shoppingBasket"></i>         
             </div>
         )
     }

@@ -6,3 +6,15 @@
     text-align: right;  
 }
 
+#shoppingBasket {
+    font-size: 30px;
+    padding-right: 500px;
+    padding-top: 30px;
+    color: #364135;
+}
+
+#search {
+    font-size: 30px;
+    color: #364135;
+    padding-right: 15px;
+}
