@@ -1,0 +1,18 @@
+.navbar {    
+    height: 80px;
+    border: solid 1px pink;  
+    text-align: center;  
+}
+
+.navButton {
+    border: none;
+    background-color: white;
+    width: 180px;
+    height: 30px;
+    font-size: 20px; 
+    color: darkgray;   
+}
+
+.horizontalLine {
+    width: 800px;    
+}
