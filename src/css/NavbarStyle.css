@@ -1,15 +1,14 @@
 .navbar {    
-    height: 80px;
-    border: solid 1px pink;  
+    height: 80px;     
     text-align: center;  
 }
 
 .navButton {
     border: none;
     background-color: white;
-    width: 250px;
+    width: 200px;
     height: 30px;
-    font-size: 20px; 
+    font-size: 15px; 
     color: darkgray;   
 }
 

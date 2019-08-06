@@ -5,7 +5,7 @@ export class Header extends Component {
     render() {
         return (
             <div className = "header"> 
-                <i class="fa fa-search" aria-hidden="true" id="search"></i>   
+                <i className="fa fa-search" aria-hidden="true" id="search"></i>   
                 <i className="fa fa-shopping-cart" aria-hidden="true" id="shoppingBasket"></i>         
             </div>
         )

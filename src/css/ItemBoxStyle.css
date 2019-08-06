@@ -1,4 +1,11 @@
 .itembox {    
-    height: 300px;
-    border: solid 1px brown;    
+    height: 500px;         
+}
+
+.new {
+    font-size: 30px; 
+    color: darkgray; 
+    text-align: center; 
+    margin-top: 20px; 
+    
 }
