@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../css/NavbarStyle.css';
+import { Link } from 'react-router-dom';
 
 export class Navbar extends Component {
     render() {
@@ -7,7 +8,7 @@ export class Navbar extends Component {
             <div className= "navbar">
                 <hr className= 'horizontalLine'></hr>                
                 <button className = 'navButton'>Home</button>
-                <button className = 'navButton'>Sklep</button>
+                <Link to="/shop" className = 'navButton'>Sklep</Link>
                 <button className = 'navButton'>O mnie</button>
                 <button className = 'navButton'>Kontakt</button> 
                 <hr className= 'horizontalLine'></hr>                

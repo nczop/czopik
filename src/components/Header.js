@@ -7,7 +7,7 @@ export class Header extends Component {
             <div className = "header"> 
                 <div className = "socialmedia">
                     <i className="fa fa-facebook-official" aria-hidden="true" id="facebook"></i>
-                    <i class="fa fa-instagram" aria-hidden="true" id="instagram"></i>
+                    <i className="fa fa-instagram" aria-hidden="true" id="instagram"></i>
                 </div>
                 <div className = "shopingCart">
                     <i className="fa fa-search" aria-hidden="true" id="search"></i>   
