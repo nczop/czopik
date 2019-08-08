@@ -8,6 +8,7 @@ import NavBar from '../src/components/Navbar';
 import Shop from '../src/components/pages/Shop';
 import AboutMe from '../src/components/pages/AboutMe';
 import Contact from '../src/components/pages/Contact';
+import Product from '../src/components/pages/Product';
 
 
 class App extends Component {
@@ -23,7 +24,8 @@ class App extends Component {
           <Route exact path="/" component= {HomePage} />                        
           <Route path="/shop" component={Shop} />
           <Route path="/aboutMe" component={AboutMe} />  
-          <Route path="/contact" component={Contact} />              
+          <Route path="/contact" component={Contact} />  
+          <Route path="/1" component={Product} />            
         </div>
       </Router>
     

@@ -4,7 +4,7 @@ export class Product extends Component {
     render() {
         return (
             <div>
-                
+                jsadlssds
             </div>
         )
     }

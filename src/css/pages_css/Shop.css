@@ -1,9 +1,4 @@
-.productContainer {
-    border: solid 1px black;      
-}
-
-.row {
-    border: solid 1px black;
+.row {    
     display: flex;
     justify-content: center;     
 }
@@ -12,4 +7,9 @@
     width: 16%;
     height: 400px;
     border: solid 1px black;
+    text-align: center;    
+}
+
+.divLink {
+    text-decoration: none;
 }
