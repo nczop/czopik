@@ -1,0 +1,15 @@
+.productContainer {
+    border: solid 1px black;      
+}
+
+.row {
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;     
+}
+
+.product {
+    width: 16%;
+    height: 400px;
+    border: solid 1px black;
+}

@@ -11,23 +11,25 @@ import Contact from '../src/components/pages/Contact';
 
 
 class App extends Component {
+  
+
   render () {
     return (
       <Router>
-        <div>
+        <div className= "mainApp">
           <Header />
           <Logo />
           <NavBar/>
           <Route exact path="/" component= {HomePage} />                        
           <Route path="/shop" component={Shop} />
           <Route path="/aboutMe" component={AboutMe} />  
-          <Route path="/contact" component={Contact} />
-              
+          <Route path="/contact" component={Contact} />              
         </div>
       </Router>
     
     )    
   }
 }
+
 
 export default App;
