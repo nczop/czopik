@@ -7,10 +7,10 @@ export class Navbar extends Component {
         return (
             <div className= "navbar">
                 <hr className= 'horizontalLine'></hr>                
-                <button className = 'navButton'>Home</button>
-                <Link to="/shop" className = 'navButton'>Sklep</Link>
-                <button className = 'navButton'>O mnie</button>
-                <button className = 'navButton'>Kontakt</button> 
+                <Link to="/" className = 'navLink'> Home </Link>
+                <Link to="/shop" className = 'navLink'> Sklep </Link>
+                <Link to="/aboutMe" className = 'navLink'> O mnie </Link>
+                <Link to="/contact" className = 'navLink'> Kontakt </Link> 
                 <hr className= 'horizontalLine'></hr>                
             </div>
         )

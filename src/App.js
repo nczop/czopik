@@ -6,6 +6,9 @@ import Header from '../src/components/Header';
 import Logo from '../src/components/Logo';
 import NavBar from '../src/components/Navbar';
 import Shop from '../src/components/pages/Shop';
+import AboutMe from '../src/components/pages/AboutMe';
+import Contact from '../src/components/pages/Contact';
+
 
 class App extends Component {
   render () {
@@ -16,7 +19,10 @@ class App extends Component {
           <Logo />
           <NavBar/>
           <Route exact path="/" component= {HomePage} />                        
-          <Route path="/shop" component={Shop} />      
+          <Route path="/shop" component={Shop} />
+          <Route path="/aboutMe" component={AboutMe} />  
+          <Route path="/contact" component={Contact} />
+              
         </div>
       </Router>
     

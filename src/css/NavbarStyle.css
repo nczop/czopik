@@ -3,13 +3,15 @@
     text-align: center;  
 }
 
-.navButton {
+.navLink {
     border: none;
-    background-color: white;
-    width: 200px;
+    background-color: white;    
     height: 30px;
     font-size: 15px; 
-    color: darkgray;   
+    color: darkgray; 
+    text-decoration: none;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
 .horizontalLine {
