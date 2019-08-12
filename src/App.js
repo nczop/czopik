@@ -9,24 +9,39 @@ import Shop from '../src/components/pages/Shop';
 import AboutMe from '../src/components/pages/AboutMe';
 import Contact from '../src/components/pages/Contact';
 import Product from '../src/components/pages/Product';
+import Footer from './components/Footer';
 
 
 class App extends Component {
   
-
+  state = {
+    item: [
+        {
+            id: 1,
+            title: 'title1',
+            description: 'description1',
+            price: 'price1',                
+        }
+        
+    ]
+}
   render () {
     return (
       <Router>
         <div className= "mainApp">
           <Header />
           <Logo />
-          <NavBar/>
+          <NavBar />          
           <Route exact path="/" component= {HomePage} />                        
           <Route path="/shop" component={Shop} />
           <Route path="/aboutMe" component={AboutMe} />  
           <Route path="/contact" component={Contact} />  
           <Route path="/1" component={Product} />            
         </div>
+        <div className= "footerApp" >
+          <Footer />
+        </div>
+        
       </Router>
     
     )    

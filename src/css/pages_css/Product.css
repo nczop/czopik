@@ -1,0 +1,39 @@
+.singleContainer {
+    display: flex;
+    justify-content: center; 
+    height: 700px;
+    border: solid 1px black;
+}
+
+.singleProduct{
+    border: solid 1px black;
+    width: 48%;
+    display: flex;
+}
+
+.photoProduct{
+    border: solid 1px red;
+    width: 50%;
+    height: 100%;
+}
+
+.titleProduct {
+    border: solid 1px yellow;    
+    height: 20%;    
+}
+
+.descriptionProduct {
+    border: solid 1px blue;    
+    height: 60%;
+}
+
+.titleDescriptionPrice {
+    border: solid 1px green;
+    width: 50%;
+    text-align: center;
+}
+
+.price {
+    border: solid 1px rosybrown;    
+    height: 20%;
+}

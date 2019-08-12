@@ -1,10 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import '../../css/pages_css/Product.css';
 
 export class Product extends Component {
+
+    
     render() {
         return (
-            <div>
-                jsadlssds
+            <div className= "singleContainer">
+                <div className= "singleProduct">
+                    <div className="photoProduct"></div>
+                    <div className="titleDescriptionPrice">
+                        <div className="titleProduct"> Nazwa plcaka</div>
+                        <div className="descriptionProduct">Opis</div>
+                        <div className="price">Cena</div>
+                    </div>
+                    
+                </div>
             </div>
         )
     }
