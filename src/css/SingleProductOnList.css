@@ -1,0 +1,19 @@
+.singleItem {
+    width: 300px;
+    height: 400px;
+    border: solid 1px black;
+    text-align: center;    
+}
+
+.photoItem {
+    height: 300px;
+}
+
+.titleItem {
+    height: 50px;    
+}
+
+.priceItem {
+    height: 50px;    
+}
+

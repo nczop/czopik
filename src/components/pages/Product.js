@@ -13,8 +13,7 @@ export class Product extends Component {
                         <div className="titleProduct"> Nazwa plcaka</div>
                         <div className="descriptionProduct">Opis</div>
                         <div className="price">Cena</div>
-                    </div>
-                    
+                    </div>                    
                 </div>
             </div>
         )

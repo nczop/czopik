@@ -3,7 +3,9 @@ import '../css/ItemBoxStyle.css';
 import Item from './Item'
 
 export class ItemBox extends Component {
-    render() {
+    
+    
+    render() {                 
         return (
             <div className = 'itembox'>
                 <div className = 'new'>Nowe uszytki</div>

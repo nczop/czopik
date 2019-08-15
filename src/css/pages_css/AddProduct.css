@@ -1,0 +1,32 @@
+.addNewProduct{
+    width: 300px;
+    height: 700px; 
+    margin: 0 auto;  
+}
+
+.addPhoto {
+    height: 300px;
+    border: solid 1px black;
+}
+
+.addTitle {
+    height: 50px; 
+    width: 100%;
+    border: solid 1px black;   
+    text-align: center;
+}
+
+.addPrice {
+    height: 50px;   
+    border: solid 1px black; 
+}
+
+.addDescription {
+    height: 200px;   
+    border: solid 1px black;
+}
+
+.confirm {
+    height: 50px;
+    width: 100%;
+}

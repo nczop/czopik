@@ -12,26 +12,15 @@ import Product from '../src/components/pages/Product';
 import Footer from './components/Footer';
 
 
-class App extends Component {
+class App extends Component {  
   
-  state = {
-    item: [
-        {
-            id: 1,
-            title: 'title1',
-            description: 'description1',
-            price: 'price1',                
-        }
-        
-    ]
-}
-  render () {
+  render () {    
     return (
       <Router>
         <div className= "mainApp">
           <Header />
           <Logo />
-          <NavBar />          
+          <NavBar />            
           <Route exact path="/" component= {HomePage} />                        
           <Route path="/shop" component={Shop} />
           <Route path="/aboutMe" component={AboutMe} />  
@@ -40,10 +29,8 @@ class App extends Component {
         </div>
         <div className= "footerApp" >
           <Footer />
-        </div>
-        
-      </Router>
-    
+        </div>        
+      </Router>    
     )    
   }
 }
