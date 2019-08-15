@@ -29,32 +29,9 @@ export class Shop extends Component {
                 price: "100 zł",
                 photo: <img src={green} alt="website logo" />
             },
-            {
-                id: uuid.v4(),
-                title: "fronendowka",
-                price: "100 zł",
-                photo: <img src={green} alt="website logo" />
-            },
-            {
-                id: uuid.v4(),
-                title: "fronendowka",
-                price: "100 zł",
-                photo: <img src={green} alt="website logo" />
-            },
-            {
-                id: uuid.v4(),
-                title: "fronendowka",
-                price: "100 zł",
-                photo: <img src={black} alt="website logo" />
-            },
-            {
-                id: uuid.v4(),
-                title: "fronendowka",
-                price: "100 zł",
-                photo: <img src={black} alt="website logo" />
-            },
-        ]
-    }    
+        ],
+        addProductHidden: true
+    }
 
     addProduct = (title) => {
         const newproductList = {
@@ -63,7 +40,7 @@ export class Shop extends Component {
             price: "100 zł",
             photo: "new"
         }
-        this.setState({ productList: [...this.state.productList, newproductList]})
+        this.setState({ productList: [...this.state.productList, newproductList] })
     }
 
     render() {
@@ -75,9 +52,11 @@ export class Shop extends Component {
                     ))}
                 </div>
                 <div className="plus">
-                    <i className="fa fa-plus" aria-hidden="true" id="plusIcon"></i>
-                </div> 
-                <AddProduct addProduct={this.addProduct}/>               
+                    <button className="fa fa-plus" aria-hidden="true" id="plusIcon" onClick={() => this.setState({addProductHidden: false})}></button>
+                </div>
+                <div className="addProductWrapper" hidden={this.state.addProductHidden}>
+                    <AddProduct addProduct={this.addProduct} />
+                </div>
             </div>
         )
     }

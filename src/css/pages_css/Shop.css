@@ -25,6 +25,8 @@
 #plusIcon {
     color: gray;
     font-size: xx-large;
+    background: none;
+    border: none;
 }
 
 .addNewProduct {
