@@ -30,7 +30,7 @@ export class Shop extends Component {
                 photo: <img src={green} alt="website logo" />
             },
         ],
-        addProductHidden: true
+        addProductHidden: true,              
     }
 
     addProduct = (title) => {
@@ -43,12 +43,12 @@ export class Shop extends Component {
         this.setState({ productList: [...this.state.productList, newproductList] })
     }
 
-    render() {
+    render() {               
         return (
             <div className="productContainer">
                 <div className="row product-wrapper">
                     {this.state.productList.map((product) => (
-                        <SingleProductOnList product={product} />
+                        <SingleProductOnList increment={this.props.increment} product={product} />
                     ))}
                 </div>
                 <div className="plus">

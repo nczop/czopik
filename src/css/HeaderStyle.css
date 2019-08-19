@@ -7,21 +7,31 @@
 }
 .shopingCart {     
     width: 50%;
-    padding-top: 20px;
-    padding-left: 240px; 
+    padding-top: 10px;
+    padding-left: 100px;
+    display: flex;    
 }
 
 .socialmedia {        
     width: 50%; 
-    padding-top: 20px; 
+    padding-top: 10px; 
     padding-left: 500px;
 }
 
 #search {       
-    padding-left: 30px; 
+    padding-left: 30px;      
 }
 
 #facebook {
-    padding-right: 30px
+    padding-right: 30px;    
 }
 
+#user {
+    padding-left: 30px;     
+}
+
+.number {
+    font-size: 15px;
+    padding-left: 10px;
+    margin-top: auto;
+}
