@@ -10,6 +10,7 @@ import AboutMe from '../src/components/pages/AboutMe';
 import Contact from '../src/components/pages/Contact';
 import Product from '../src/components/pages/Product';
 import Footer from './components/Footer';
+import LoginForm from './components/pages/LoginForm';
 
 
 class App extends Component {
@@ -21,14 +22,14 @@ class App extends Component {
   increment = () => {
     this.setState({
       counter: this.state.counter + 1
-    })    
-  }
+    })
+  }   
 
   render() {
     return (
       <Router>
         <div className="mainApp">
-          <Header counter={this.state.counter} />
+          <Header counter={this.state.counter} />                    
           <Logo />
           <NavBar />
           <Route exact path="/" component={HomePage} />
@@ -36,6 +37,7 @@ class App extends Component {
           <Route path="/aboutMe" component={AboutMe} />
           <Route path="/contact" component={Contact} />
           <Route path="/1" component={Product} />
+          <Route path="/login" component={LoginForm} />
         </div>
         <div className="footerApp" >
           <Footer />

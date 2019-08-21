@@ -1,0 +1,13 @@
+.mainLoginDiv {       
+    height: 349px;
+}
+
+.loginForm {
+    width: 30%;
+    margin: 0 auto;   
+    text-align: center;   
+}
+
+.inputLoginAndPassword {
+    size: 50px;
+}

@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import '../css/HeaderStyle.css';
+import { Link } from 'react-router-dom';
+
 
 export class Header extends Component {
+    
     
     
     render() {
@@ -18,7 +21,7 @@ export class Header extends Component {
                     </div>
                     <div>
                         <i className="fa fa-search" aria-hidden="true" id="search"></i>
-                        <i className="fa fa-user" aria-hidden="true" id="user"></i>
+                        <Link to="/login" className = 'navLinkLogin'><i className="fa fa-user" aria-hidden="true" id="user" ></i></Link>
                     </div>
                 </div>
             </div>
