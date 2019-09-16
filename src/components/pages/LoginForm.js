@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import '../../css/pages_css/LoginFormStyle.css';
 import { auth } from '../../AuthService';
 import LoggedUser from './LoggedUser';
+import { withRouter } from "react-router-dom";
 
-export class LoginForm extends Component {
+class LoginForm extends Component {
 
     state = {
         login: '',
@@ -23,13 +24,13 @@ export class LoginForm extends Component {
     authUser = () => {
         const loginResult = auth(this.state.login, this.state.password)
         this.props.showUSer(loginResult)
+        this.props.history.push("/loggedUser")
     }
 
     render() {
+        console.log(this.props)
         return (
-            <div className="mainLoginDiv">
-                {this.props.loggedUser ? 
-                    <LoggedUser></LoggedUser> :
+            <div className="mainLoginDiv">                
                     <div className="loginForm">
                         <div className="loginAndPassword">
                             <h2>Zaloguj się </h2>
@@ -42,11 +43,11 @@ export class LoginForm extends Component {
                             <button type="submit" disabled={!this.validateForm} onClick={this.authUser} >Zaloguj</button>
                         </div>
                     </div>
-                }
+                
             </div>
         )
     }
 }
 
 
-export default LoginForm
+export default withRouter(LoginForm)

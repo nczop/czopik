@@ -12,6 +12,8 @@ import Product from '../src/components/pages/Product';
 import Footer from './components/Footer';
 import LoginForm from './components/pages/LoginForm';
 import { isUserLoggedIn } from './AuthService';
+import { LoggedUser } from './components/pages/LoggedUser';
+import { createBrowserHistory } from 'history';
 
 
 class App extends Component {
@@ -48,8 +50,9 @@ class App extends Component {
   }
 
   render() {
+    const history = createBrowserHistory()
     return (
-      <Router>
+      <Router history={history}>
         <div className="mainApp">
           <Header counter={this.state.counter} loggedUser ={this.state.loggedUser}/>
           <Logo />
@@ -60,6 +63,7 @@ class App extends Component {
           <Route path="/contact" component={Contact} />
           <Route path="/1" component={Product} />
           <Route path="/login" component={() => <LoginForm showUSer={this.showUSer} loggedUser ={this.state.loggedUser}/>} />
+          <Route path="/loggedUser" component={LoggedUser} />
         </div>
         <div className="footerApp" >
           <Footer />
