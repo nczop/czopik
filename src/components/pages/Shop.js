@@ -6,6 +6,7 @@ import green from '../../../src/green.png';
 import SingleProductOnList from '../SingleProductOnList';
 import uuid from 'uuid';
 import AddProduct from './AddProduct';
+import { isUserLoggedIn } from '../../AuthService'
 
 export class Shop extends Component {
 
@@ -30,7 +31,7 @@ export class Shop extends Component {
                 photo: <img src={green} alt="website logo" />
             },
         ],
-        addProductHidden: true,              
+        addProductHidden: true,
     }
 
     addProduct = (title) => {
@@ -42,8 +43,7 @@ export class Shop extends Component {
         }
         this.setState({ productList: [...this.state.productList, newproductList] })
     }
-
-    render() {               
+    render() {
         return (
             <div className="productContainer">
                 <div className="row product-wrapper">
@@ -51,9 +51,11 @@ export class Shop extends Component {
                         <SingleProductOnList increment={this.props.increment} product={product} />
                     ))}
                 </div>
-                <div className="plus">
-                    <button className="fa fa-plus" aria-hidden="true" id="plusIcon" onClick={() => this.setState({addProductHidden: false})}></button>
-                </div>
+                {isUserLoggedIn() &&
+                    <div className="plus">
+                        <button className="fa fa-plus" aria-hidden="true" id="plusIcon" onClick={() => this.setState({ addProductHidden: false })}></button>
+                    </div>
+                }
                 <div className="addProductWrapper" hidden={this.state.addProductHidden}>
                     <AddProduct addProduct={this.addProduct} />
                 </div>

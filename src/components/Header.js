@@ -3,11 +3,10 @@ import '../css/HeaderStyle.css';
 import { Link } from 'react-router-dom';
 
 
+
 export class Header extends Component {
-    
-    
-    
-    render() {
+
+       render() {
         return (
             <div className="header">
                 <div className="socialmedia">
@@ -21,7 +20,8 @@ export class Header extends Component {
                     </div>
                     <div>
                         <i className="fa fa-search" aria-hidden="true" id="search"></i>
-                        <Link to="/login" className = 'navLinkLogin'><i className="fa fa-user" aria-hidden="true" id="user" ></i></Link>
+                        <Link to="/login" className='navLinkLogin'><i className="fa fa-user" aria-hidden="true" id="user" ></i></Link>
+                        <div className="loggedUser">{this.props.loggedUser ? 'n' : '0'}</div>
                     </div>
                 </div>
             </div>
