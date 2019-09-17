@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import '../../css/pages_css/Product.css';
+import { withRouter } from "react-router-dom";
 
-export class Product extends Component {
 
+class Product extends Component {
     
     render() {
+        console.log(this.props)
         return (
             <div className= "singleContainer">
                 <div className= "singleProduct">
@@ -20,4 +22,4 @@ export class Product extends Component {
     }
 }
 
-export default Product
+export default withRouter(Product)

@@ -4,19 +4,20 @@ import { withRouter } from "react-router-dom";
 
 
 
-export class LoggedUser extends Component {
+ class LoggedUser extends Component {
 
     removeItem = () => {
-        localStorage.removeItem("login")             
-        const logout = isUserLoggedIn()        
+        localStorage.removeItem("login")
+        const logout = isUserLoggedIn()
         this.props.showUSer(logout)
-        this.props.history.push("/")          
+        this.props.history.push("/")
     }
+
 
     render() {
         return (
             <div>
-               <button onClick={this.removeItem}> wyloguj </button> 
+                <button onClick={this.removeItem}> wyloguj </button>
             </div>
         )
     }

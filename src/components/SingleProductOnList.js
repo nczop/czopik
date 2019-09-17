@@ -7,7 +7,7 @@ export class SingleProductOnList extends Component {
     render() {
         return (
             <div className="singleItem">
-                <Link to="/1" className="divLink">
+                <Link to={"/shop/"+this.props.product.id} className="divLink">
                     <div className="photoItem">{this.props.product.photo}</div>
                     <div className="titleItem">{this.props.product.title}</div>
                 </Link>

@@ -12,7 +12,7 @@ import Product from '../src/components/pages/Product';
 import Footer from './components/Footer';
 import LoginForm from './components/pages/LoginForm';
 import { isUserLoggedIn } from './AuthService';
-import { LoggedUser } from './components/pages/LoggedUser';
+import LoggedUser from './components/pages/LoggedUser';
 import { createBrowserHistory } from 'history';
 
 
@@ -58,10 +58,10 @@ class App extends Component {
           <Logo />
           <NavBar />
           <Route exact path="/" component={HomePage} />
-          <Route path="/shop" component={() => <Shop increment={this.increment} />} />
+          <Route exact path="/shop" component={() => <Shop increment={this.increment} />} />
           <Route path="/aboutMe" component={AboutMe} />
           <Route path="/contact" component={Contact} />
-          <Route path="/1" component={Product} />
+          <Route path="/shop/:id" component={Product} />
           <Route path="/login" component={() => <LoginForm showUSer={this.showUSer} loggedUser={this.state.loggedUser} />} />
           <Route path="/loggedUser" component={() => <LoggedUser showUSer={this.showUSer} loggedUser={this.state.loggedUser} />} />
         </div>
