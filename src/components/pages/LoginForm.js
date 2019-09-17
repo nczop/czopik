@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import '../../css/pages_css/LoginFormStyle.css';
 import { auth } from '../../AuthService';
-import LoggedUser from './LoggedUser';
 import { withRouter } from "react-router-dom";
 
 class LoginForm extends Component {
@@ -27,8 +26,7 @@ class LoginForm extends Component {
         this.props.history.push("/loggedUser")
     }
 
-    render() {
-        console.log(this.props)
+    render() {        
         return (
             <div className="mainLoginDiv">                
                     <div className="loginForm">

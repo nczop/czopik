@@ -1,13 +1,25 @@
 import React, { Component } from 'react'
+import { isUserLoggedIn } from '../../AuthService';
+import { withRouter } from "react-router-dom";
+
+
 
 export class LoggedUser extends Component {
+
+    removeItem = () => {
+        localStorage.removeItem("login")             
+        const logout = isUserLoggedIn()        
+        this.props.showUSer(logout)
+        this.props.history.push("/")          
+    }
+
     render() {
         return (
             <div>
-               blablabla 
+               <button onClick={this.removeItem}> wyloguj </button> 
             </div>
         )
     }
 }
 
-export default LoggedUser
+export default withRouter(LoggedUser)

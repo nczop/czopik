@@ -36,11 +36,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const isLoggedIn =  isUserLoggedIn()
+    const isLoggedIn = isUserLoggedIn()
     if (isLoggedIn) {
       this.setState({
-        loggedUser: true         
-      })      
+        loggedUser: true
+      })
     }
     else {
       this.setState({
@@ -54,7 +54,7 @@ class App extends Component {
     return (
       <Router history={history}>
         <div className="mainApp">
-          <Header counter={this.state.counter} loggedUser ={this.state.loggedUser}/>
+          <Header counter={this.state.counter} loggedUser={this.state.loggedUser} />
           <Logo />
           <NavBar />
           <Route exact path="/" component={HomePage} />
@@ -62,8 +62,8 @@ class App extends Component {
           <Route path="/aboutMe" component={AboutMe} />
           <Route path="/contact" component={Contact} />
           <Route path="/1" component={Product} />
-          <Route path="/login" component={() => <LoginForm showUSer={this.showUSer} loggedUser ={this.state.loggedUser}/>} />
-          <Route path="/loggedUser" component={LoggedUser} />
+          <Route path="/login" component={() => <LoginForm showUSer={this.showUSer} loggedUser={this.state.loggedUser} />} />
+          <Route path="/loggedUser" component={() => <LoggedUser showUSer={this.showUSer} loggedUser={this.state.loggedUser} />} />
         </div>
         <div className="footerApp" >
           <Footer />
