@@ -8,7 +8,7 @@ export class SingleProductOnList extends Component {
         return (
             <div className="singleItem">
                 <Link to={"/shop/"+this.props.product.id} className="divLink">
-                    <div className="photoItem">{this.props.product.photo}</div>
+                    <div className="photoItem"><img src={this.props.product.photo}></img></div>
                     <div className="titleItem">{this.props.product.title}</div>
                 </Link>
                 <div className="priceItem">{this.props.product.price}

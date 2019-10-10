@@ -6,43 +6,43 @@ import green from '../../../src/green.png';
 import SingleProductOnList from '../SingleProductOnList';
 import uuid from 'uuid';
 import AddProduct from './AddProduct';
-import { isUserLoggedIn } from '../../AuthService'
+import { isUserLoggedIn } from '../../AuthService';
+import axios from 'axios';
 
 export class Shop extends Component {
 
     state = {
-        productList: [
-            {
-                id: uuid.v4(),
-                title: "fronendowka",
-                price: "100 zł",
-                photo: <img src={pink} alt="website logo" />
-            },
-            {
-                id: uuid.v4(),
-                title: "fronendowka",
-                price: "100 zł",
-                photo: <img src={black} alt="website logo" />
-            },
-            {
-                id: uuid.v4(),
-                title: "fronendowka",
-                price: "100 zł",
-                photo: <img src={green} alt="website logo" />
-            },
-        ],
+        productList: [],
         addProductHidden: true,
     }
 
+    componentDidMount() {
+    axios.get(`http://localhost:5000/chomik`)
+      .then(res => {       
+        this.setState({ productList: res.data });
+      })
+    }    
+    
+
     addProduct = (title) => {
-        const newproductList = {
+        const newproduct = {
             id: uuid.v4(),
             title,
             price: "100 zł",
             photo: "new"
         }
-        this.setState({ productList: [...this.state.productList, newproductList] })
+        axios.post('http://localhost:5000/newbag', newproduct)
+        .then(res => {
+            this.setState({ productList: [...this.state.productList, newproduct] })                  
+        })        
     }
+// axios.post('http://localhost:5000/newbag', newproduct)
+        // .then(res => {
+        //     this.setState({ productList: [...this.state.productList, newproduct] })
+        // })   axios.post('http://localhost:5000/newbag', newproduct)
+        // .then(res => {
+        //     this.setState({ productList: [...this.state.productList, newproduct] })
+        // })   
     render() {
         return (
             <div className="productContainer">

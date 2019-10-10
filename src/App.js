@@ -16,6 +16,7 @@ import LoggedUser from './components/pages/LoggedUser';
 import { createBrowserHistory } from 'history';
 
 
+
 class App extends Component {
 
   state = {

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../../css/pages_css/Product.css';
 import { withRouter } from "react-router-dom";
 
-
 class Product extends Component {
     
     render() {
