@@ -17,7 +17,7 @@ export class Shop extends Component {
     }
 
     componentDidMount() {
-    axios.get(`http://localhost:5000/chomik`)
+    axios.get(`http://localhost:5000/shop`)
       .then(res => {       
         this.setState({ productList: res.data });
       })
@@ -31,18 +31,12 @@ export class Shop extends Component {
             price: "100 zł",
             photo: "new"
         }
-        axios.post('http://localhost:5000/newbag', newproduct)
+        axios.post('http://localhost:5000/shop', newproduct)
         .then(res => {
             this.setState({ productList: [...this.state.productList, newproduct] })                  
         })        
     }
-// axios.post('http://localhost:5000/newbag', newproduct)
-        // .then(res => {
-        //     this.setState({ productList: [...this.state.productList, newproduct] })
-        // })   axios.post('http://localhost:5000/newbag', newproduct)
-        // .then(res => {
-        //     this.setState({ productList: [...this.state.productList, newproduct] })
-        // })   
+         
     render() {
         return (
             <div className="productContainer">
