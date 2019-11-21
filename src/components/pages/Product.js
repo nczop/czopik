@@ -29,8 +29,10 @@ class Product extends Component {
                         <div className="price">{product.price}</div>
                     </div>                    
                 </div>
-            </div>
-        )
+            )
+        } 
+        return <h1>nie dziala</h1>
+        
     }
 }
 
