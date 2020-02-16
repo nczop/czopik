@@ -14,21 +14,56 @@ import LoginForm from './components/pages/LoginForm';
 import { isUserLoggedIn } from './AuthService';
 import LoggedUser from './components/pages/LoggedUser';
 import { createBrowserHistory } from 'history';
+import Basket from '../src/components/pages/Basket';
 
+const initQuantity = 1;
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    const getBasketList = JSON.parse(localStorage.getItem('basketList'))    
+    const initBasketList = getBasketList ? getBasketList : []
 
-  state = {
-    counter: 0,
-    loggedUser: false,
+    this.state = {
+      counter: localStorage.getItem('counter') ? localStorage.getItem('counter') : 0,
+      loggedUser: false,      
+      idBasketCounter: initBasketList,
+      elementID: ""
+    }    
   }
 
-  increment = () => {
-    this.setState({
-      counter: this.state.counter + 1
+
+  addBagToBasket = (id) => {     
+
+    const newIdCounterBasket = {
+      id: id,
+      quantity: initQuantity
+    }
+
+    const { idBasketCounter } = this.state;
+    let szukanyElement = idBasketCounter.find(element => element.id === id)
+    let cos 
+    if (szukanyElement) {
+      cos = idBasketCounter
+      szukanyElement.quantity++
+      this.setState({ idBasketCounter: cos })      
+    } else {
+      cos = [...this.state.idBasketCounter, newIdCounterBasket]
+      this.setState({
+        idBasketCounter: cos
+      })
+    }
+    const counterPlus = this.state.counter+1    
+    
+    this.setState({      
+      counter: counterPlus,
     })
+
+    localStorage.setItem('basketList', JSON.stringify(cos));
+    localStorage.setItem('counter', counterPlus)
   }
+
 
   showUSer = (isUSer) => {
     this.setState({
@@ -37,17 +72,17 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const isLoggedIn = isUserLoggedIn()
+    const isLoggedIn = isUserLoggedIn()    
     if (isLoggedIn) {
       this.setState({
-        loggedUser: true
+        loggedUser: true,
       })
     }
     else {
       this.setState({
         loggedUser: false
       })
-    }
+    }    
   }
 
   render() {
@@ -59,12 +94,13 @@ class App extends Component {
           <Logo />
           <NavBar />
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/shop" component={() => <Shop increment={this.increment} />} />
+          <Route exact path="/shop" component={() => <Shop addBagToBasket={this.addBagToBasket} />} />
           <Route path="/aboutMe" component={AboutMe} />
           <Route path="/contact" component={Contact} />
           <Route path="/shop/:id" component={Product} />
           <Route path="/login" component={() => <LoginForm showUSer={this.showUSer} loggedUser={this.state.loggedUser} />} />
           <Route path="/loggedUser" component={() => <LoggedUser showUSer={this.showUSer} loggedUser={this.state.loggedUser} />} />
+          <Route path="/basket" component={() => <Basket basket={this.state.idBasketCounter} quantity={this.state.quantity} counter={this.state.counter} />} />
         </div>
         <div className="footerApp" >
           <Footer />

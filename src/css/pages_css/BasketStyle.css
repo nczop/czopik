@@ -1,0 +1,69 @@
+.basketContainer {
+    display: flex;
+    justify-content: center; 
+    height: 700px;
+    /* border: solid 1px black;     */
+}
+
+.basketProducts {
+    /* border: solid 1px black; */
+    width: 48%;    
+}
+
+.headerBasket {
+    /* border: solid 1px black; */
+    height: 70px;
+    width: 100%; 
+    font-size: 30px; 
+    font-family: 'Arial';
+    color: darkgray;   
+    text-align: center;
+}
+
+.horizontalLineBasket {
+    width: 100%;   
+}
+
+.headerTable {
+    width: 100%;
+    height: 20px;    
+    font-size: 15px; 
+    font-family: 'Arial';
+    color: darkgray; 
+    display: flex;  
+    
+}
+
+.basketProductName {
+    width: 62%
+}
+
+.basketQuantity {
+    width: 20%;
+    text-align: center;
+}
+
+.basketPrice {
+    width: 18%; 
+    text-align: center;
+}
+
+.emptyBasket {
+    text-align: center;
+    font-family: 'Arial';
+    color: darkgray;
+    font-size: 25px; 
+    margin: 30px;
+}
+
+.basketSum {
+    border: solid 1px black;
+    height: 50px;
+    background-color: lightgrey;
+    display: flex;
+}
+
+
+
+
+

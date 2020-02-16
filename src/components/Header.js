@@ -15,7 +15,7 @@ export class Header extends Component {
                 </div>
                 <div className="shopingCart">
                     <div className="counter">
-                        <i className="fa fa-shopping-cart" aria-hidden="true" id="shoppingCart" ></i>
+                        <Link to="/basket"><i className="fa fa-shopping-cart" aria-hidden="true" id="shoppingCart" ></i></Link>                        
                         <p className="number">{this.props.counter}</p>
                     </div>
                     <div>

@@ -21,3 +21,9 @@
     border: none;
 }
 
+#trashIcon {
+    justify-content: flex-end;
+    background: none;
+    border: none;
+}
+

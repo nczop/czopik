@@ -13,11 +13,10 @@ class Product extends Component {
         axios.get(`http://localhost:5000/shop/` + this.props.match.params.id)
             .then(res => {
                 this.setState({ product: res.data });
-            })
+        })
     }
 
-    render() {
-        console.log(this.state)
+    render() {        
         const { product } = this.state;
         return (
             <div className="singleContainer">
