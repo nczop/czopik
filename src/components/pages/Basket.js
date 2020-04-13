@@ -30,15 +30,17 @@ export class Basket extends Component {
                  <div className= "basketProducts">
                     <div className= "headerBasket">Twoje zakupy </div>
                     <div className= "headerTable">
+                        <div className= "basketProductRemove"></div>
                         <div className= "basketProductName">Produkt</div>
-                        <div className= "basketQuantity">Ilość</div>
-                        <div className= "basketPrice">Cena</div>
+                        <div className= "basketProductPrice">Cena</div>
+                        <div className= "basketProductQuantity">Ilość</div>
+                        <div className= "basketProductSum">Suma</div>
                     </div>
                     <hr className= "horizontalLineBasket"></hr>                  
                         {this.state.product.map((item) => (
                             <BasketItem item={item} quantity={this.props.quantity} ></BasketItem>                             
                         ))}
-                    <div className="basketSum">
+                    <div className="basketSummary">
                         <div>Kupon</div>
                         <div>Suma</div>
                     </div>                                           

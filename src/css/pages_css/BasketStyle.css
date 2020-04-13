@@ -30,22 +30,29 @@
     font-size: 15px; 
     font-family: 'Arial';
     color: darkgray; 
-    display: flex;  
-    
+    display: flex; 
+    text-align: center;     
 }
 
 .basketProductName {
-    width: 62%
+    width: 59%;   
+    text-align: left; 
 }
 
-.basketQuantity {
-    width: 20%;
-    text-align: center;
+.basketProductRemove {
+    width: 5%;    
 }
 
-.basketPrice {
-    width: 18%; 
-    text-align: center;
+.basketProductQuantity {
+    width: 12%;        
+}
+
+.basketProductPrice {
+    width: 12%;     
+}
+
+.basketProductSum {
+    width: 12%;     
 }
 
 .emptyBasket {
@@ -56,10 +63,9 @@
     margin: 30px;
 }
 
-.basketSum {
-    border: solid 1px black;
+.basketSummary {    
     height: 50px;
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
     display: flex;
 }
 
