@@ -1,21 +1,29 @@
 
 .header {    
-    height: 30px;    
+    height: 200px;    
     color: #364135;
     font-size: 30px;
-    display: flex;    
+    display: flex;
+    margin-top: 10px;
 }
 .shopingCart {     
-    width: 50%;
-    padding-top: 10px;
-    padding-left: 100px;
-    display: flex;    
+    width: 25%;    
+    display: flex;
 }
 
 .socialmedia {        
+    width: 25%;           
+    text-align: right;
+}
+
+.logo {    
     width: 50%; 
-    padding-top: 10px; 
-    padding-left: 500px;
+    height: 100%;    
+    text-align: center;
+}
+
+.logoStyle {
+    width: 400px;
 }
 
 #search {       
@@ -41,5 +49,3 @@
     padding-left: 92px;
     margin-top: auto;    
 }
-
-

@@ -1,7 +1,7 @@
 .singleContainer {
     display: flex;
     justify-content: center; 
-    height: 700px;
+    height: 400px;
     border: solid 1px black;
 }
 

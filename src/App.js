@@ -91,7 +91,7 @@ class App extends Component {
       <Router history={history}>
         <div className="mainApp">
           <Header counter={this.state.counter} loggedUser={this.state.loggedUser} />
-          <Logo />
+          {/* <Logo /> */}
           <NavBar />
           <Route exact path="/" component={HomePage} />
           <Route exact path="/shop" component={() => <Shop addBagToBasket={this.addBagToBasket} />} />

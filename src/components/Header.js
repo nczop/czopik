@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/HeaderStyle.css';
 import { Link } from 'react-router-dom';
+import czopikLogo from '../czopikLogo.png';
 
 
 
@@ -13,6 +14,9 @@ export class Header extends Component {
                     <i className="fa fa-facebook-official" aria-hidden="true" id="facebook"></i>
                     <i className="fa fa-instagram" aria-hidden="true" id="instagram"></i>
                 </div>
+            <div className= 'logo'>
+                <img className= "logoStyle" src={czopikLogo} alt="website logo" />
+            </div>
                 <div className="shopingCart">
                     <div className="counter">
                         <Link to="/basket"><i className="fa fa-shopping-cart" aria-hidden="true" id="shoppingCart" ></i></Link>                        
@@ -26,14 +30,10 @@ export class Header extends Component {
                         }
                         <div className="loggedUser">{this.props.loggedUser ? 'n' : '0'}</div>
                     </div>
-                </div>
+                </div>                
             </div>
         )
     }
 }
 
 export default Header
-
-
-
-

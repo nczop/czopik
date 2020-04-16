@@ -24,7 +24,7 @@ class Product extends Component {
                     <div className="photoProduct"><img src={product.photo}></img></div>
                     <div className="titleDescriptionPrice">
                         <div className="titleProduct"> {product.title}</div>
-                        <div className="descriptionProduct">Opis</div>
+                        <div className="descriptionProduct">{product.description}</div>
                         <div className="price">{product.price}</div>
                     </div>
                 </div>
